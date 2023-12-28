@@ -1,0 +1,43 @@
+//origin is (35, 22);
+//scale is (5, 5);
+//for t from 0 to 2*pi step pi/100 draw(cos(t), sin(t));
+//scale is (10, 10);
+//for t from 0 to 2*pi step pi/200 draw(cos(t), sin(t));
+
+--------------- 函数f(t)=t的图形
+//origin is (1, 3);	-- 设置原点的偏移量
+//rot is 0;			-- 设置旋转角度(不旋转)
+//scale is (1, 1);		-- 设置横坐标和纵坐标的比例
+//for T from 0 to 200 step 1 draw (t, 0);
+				-- 横坐标的轨迹（纵坐标为0）
+//for T from 0 to 150 step 1 draw (0, -t);
+				-- 纵坐标的轨迹（横坐标为0）
+//for T from 0 to 120 step 1 draw (t, -t);
+				-- 函数f(t)=t的轨迹
+
+/*
+    以下为正式测试内容
+*/
+/*
+ORIGIN IS (30, 30);	// 原点移至(30, 20)
+SCALE IS (30, 30);	// 图形放大30
+
+-- 绘制园的轨迹
+FOR T FROM 0 TO 2*PI STEP PI/50 DRAW (cos(T), sin(T));
+
+SCALE IS (30, 30/3);	// 纵坐标缩小为三分之一
+-- 绘制轨迹
+FOR T FROM 0 TO 2*PI STEP PI/50 DRAW (cos(T), sin(T));
+ROT IS PI/2;		// 逆时针旋转90度
+-- 绘制轨迹
+FOR T FROM 0 TO 2*PI STEP PI/50 DRAW (cos(T), sin(T).);
+-16+5**3/cos(1)		-- 不是语句
+rot is -16+5**3/cos(pi)	-- 行尾少分号
+rot is -16+5**3/cos(pi);	-- 正确语句 结果为-16+125/（-1）= -141
+*/
+scale is (100,100);
+for t from 0 to 2*pi step pi/50 draw (cos(t),sin(t));
+scale is (100/2,100);
+origin is (100,0);
+rot is pi/2
+for t from 0 to 2*pi step pi/50 draw (cos(t),sin(t));
